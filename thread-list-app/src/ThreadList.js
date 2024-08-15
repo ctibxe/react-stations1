@@ -13,10 +13,11 @@ function ThreadList() {
     return (
         <div>
             <h1>Thread List</h1>
-            {/*ここでボタン作成*/}
+            {/*ここでボタン作成をし、Linkタグによってクリックすることで遷移する*/}
             <Link to="/threads/new">
                 <button>Create New Thread</button>
             </Link>
+
             {/*ここで表の作成*/}
             <ul>
                 {threads.map(thread => (

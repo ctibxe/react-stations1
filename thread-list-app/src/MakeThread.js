@@ -9,12 +9,13 @@ function MakeThread(){
     const handleSubmit = (e) => {
         e.preventDefault();
         fetch("https://railway.bulletinboard.techtrain.dev/threads", {
-            method: "POST",
+            method: "POST", // 既存のデータに新しいスレッドを付加する。
             headers: {
                 "Content-Type": "application/json",
             },
             body: JSON.stringify({title}),
         })
+        //クリックした後の動き
         .then(response => {
             if(response.ok){
                 navigate('/');//もとのURLに遷移させる
